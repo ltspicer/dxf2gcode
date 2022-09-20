@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: dxf2gcode
+Version: 2022-02-26
+Summary: 2D drawings to CNC machine compatible G-Code converter..
+Home-page: https://sourceforge.net/p/dxf2gcode/wiki/Home/
+Author: Christian Kohloeffel
+Author-email: christian.kohloeffel@googlemail.com
+License: GPLv3
+Description: DXF2GCODE is a tool for converting 2D (dxf, pdf, ps) drawings to CNC machine compatible GCode. Release Candidate based on development branch
+Platform: UNKNOWN
