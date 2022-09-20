@@ -14,7 +14,9 @@ Installer for Debian based OS specific to this release:
 linux.installer.py3.10.sh
 
 Just start with:
+
 ./linux.installer.py3.10.sh
+
 in console and follow the instructions.
 
 
