@@ -1,0 +1,17 @@
+<RCC>
+  <qresource>
+    <file>images/custom.png</file>
+    <file>images/blocks.png</file>
+    <file>images/collapse-all.png</file>
+    <file>images/delete.png</file>
+    <file>images/dxf2gcode_logo.png</file>
+    <file>images/DXF2GCODE-001.ico</file>
+    <file>images/expand-all.png</file>
+    <file>images/go-down.png</file>
+    <file>images/go-up.png</file>
+    <file>images/layer.png</file>
+    <file>images/shape.png</file>
+    <file>images/list-add.png</file>
+    <file>images/list-remove.png</file>
+  </qresource>
+</RCC>

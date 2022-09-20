@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>696</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DXF2GCODE</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="dxf2gcode_images.qrc">
+    <normaloff>:/images/DXF2GCODE-001.ico</normaloff>:/images/DXF2GCODE-001.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+      <widget class="QTabWidget" name="mytabWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>2</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Entities</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="spacing">
+            <number>1</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="blocksCollapsePushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>Collapse all items</string>
+             </property>
+             <property name="icon">
+              <iconset resource="dxf2gcode_images.qrc">
+               <normaloff>:/images/collapse-all.png</normaloff>:/images/collapse-all.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="blocksExpandPushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>Expand all items</string>
+             </property>
+             <property name="icon">
+              <iconset resource="dxf2gcode_images.qrc">
+               <normaloff>:/images/expand-all.png</normaloff>:/images/expand-all.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>13</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="TreeView" name="entitiesTreeView">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Layers</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>1</number>
+         </property>
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="spacing">
+            <number>1</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="layersCollapsePushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>Collapse all items</string>
+             </property>
+             <property name="icon">
+              <iconset resource="dxf2gcode_images.qrc">
+               <normaloff>:/images/collapse-all.png</normaloff>:/images/collapse-all.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="layersExpandPushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>Expand all items</string>
+             </property>
+             <property name="icon">
+              <iconset resource="dxf2gcode_images.qrc">
+               <normaloff>:/images/expand-all.png</normaloff>:/images/expand-all.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>13</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="layersGoUpPushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>Move-up the selected shape/layer</string>
+             </property>
+             <property name="icon">
+              <iconset resource="dxf2gcode_images.qrc">
+               <normaloff>:/images/go-up.png</normaloff>:/images/go-up.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="layersGoDownPushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>Move-down the selected shape/layer</string>
+             </property>
+             <property name="icon">
+              <iconset resource="dxf2gcode_images.qrc">
+               <normaloff>:/images/go-down.png</normaloff>:/images/go-down.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="TreeView" name="layersShapesTreeView">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="millSettingsFrame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <property name="lineWidth">
+            <number>0</number>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="spacing">
+               <number>2</number>
+              </property>
+              <item>
+               <widget class="QComboBox" name="toolDiameterComboBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maxVisibleItems">
+                 <number>20</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <item>
+                   <widget class="QLabel" name="label_11">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string notr="true">⌀</string>
+                    </property>
+                    <property name="textFormat">
+                     <enum>Qt::PlainText</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="toolDiameterLabel">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string notr="true">[mm]</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_12">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>/ speed </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="toolSpeedLabel">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string notr="true">[rpm]</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                  <item>
+                   <widget class="QLabel" name="label_13">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>start rad. (comp) </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="startRadiusLabel">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string notr="true">[mm]</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
+              <property name="horizontalSpacing">
+               <number>2</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>0</number>
+              </property>
+              <item row="4" column="1">
+               <widget class="QLineEdit" name="zInitialMillDepthLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="toolTip">
+                 <string>Milling will start at Z = &quot;Workpiece top Z&quot; - &quot;Z infeed depth&quot;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_13">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_7">
+                  <property name="text">
+                   <string>Feed rate XY</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="unitLabel_8">
+                  <property name="text">
+                   <string notr="true">[mm/min]</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="6" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_8">
+                  <property name="text">
+                   <string>Z Final mill depth</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="unitLabel_7">
+                  <property name="text">
+                   <string notr="true">[mm]</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLineEdit" name="zInfeedDepthLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_9">
+                  <property name="text">
+                   <string>Z Infeed depth</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="unitLabel_6">
+                  <property name="text">
+                   <string notr="true">[mm]</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="zSafetyMarginLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QLineEdit" name="zFinalMillDepthLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_5">
+                  <property name="text">
+                   <string>Z Safety margin</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="unitLabel_4">
+                  <property name="text">
+                   <string notr="true">[mm]</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="zRetractionArealLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_6">
+                  <property name="text">
+                   <string>Z Retraction area</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="unitLabel_3">
+                  <property name="text">
+                   <string notr="true">[mm]</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="4" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_14">
+                  <property name="text">
+                   <string>Z Workpiece top</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="unitLabel_5">
+                  <property name="text">
+                   <string notr="true">[mm]</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="8" column="1">
+               <widget class="QLineEdit" name="g1FeedZLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="startAtXLabel">
+                  <property name="text">
+                   <string>Start X</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="unitLabel_1">
+                  <property name="text">
+                   <string notr="true">[mm]</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="startAtYLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QLineEdit" name="g1FeedXYLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_14">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>Feed rate Z</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="unitLabel_9">
+                  <property name="text">
+                   <string notr="true">[mm/min]</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="startAtYLabel">
+                  <property name="text">
+                   <string>Start Y</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="unitLabel_2">
+                  <property name="text">
+                   <string notr="true">[mm]</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="startAtXLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="Canvas" name="canvas">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>7</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="MessageBox" name="messageBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionReload"/>
+    <addaction name="separator"/>
+    <addaction name="actionSaveProjectAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuExport">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="statusTip">
+     <string>Export the current project to G-Code</string>
+    </property>
+    <property name="title">
+     <string>&amp;Export</string>
+    </property>
+    <addaction name="actionOptimizePaths"/>
+    <addaction name="actionExportShapes"/>
+    <addaction name="actionOptimizeAndExportShapes"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionShowPathDirections"/>
+    <addaction name="actionShowDisabledPaths"/>
+    <addaction name="separator"/>
+    <addaction name="actionLiveUpdateExportRoute"/>
+    <addaction name="actionDeleteG0Paths"/>
+    <addaction name="separator"/>
+    <addaction name="actionAutoscale"/>
+    <addaction name="actionTopView"/>
+    <addaction name="actionIsometricView"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+    <widget class="QMenu" name="menuMachine_Type">
+     <property name="title">
+      <string>Mac&amp;hine Type</string>
+     </property>
+     <addaction name="actionMilling"/>
+     <addaction name="actionLathe"/>
+     <addaction name="actionDragKnife"/>
+    </widget>
+    <widget class="QMenu" name="menu_Measurement_units">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="title">
+      <string>Measurement &amp;units</string>
+     </property>
+     <addaction name="actionMillimeters"/>
+     <addaction name="actionInches"/>
+    </widget>
+    <addaction name="actionConfiguration"/>
+    <addaction name="actionConfigurationPostprocessor"/>
+    <addaction name="separator"/>
+    <addaction name="actionTolerances"/>
+    <addaction name="separator"/>
+    <addaction name="actionScaleAll"/>
+    <addaction name="actionRotateAll"/>
+    <addaction name="separator"/>
+    <addaction name="actionMoveWorkpieceZero"/>
+    <addaction name="separator"/>
+    <addaction name="actionSplitLineSegments"/>
+    <addaction name="actionAutomaticCutterCompensation"/>
+    <addaction name="menuMachine_Type"/>
+    <addaction name="menu_Measurement_units"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuExport"/>
+   <addaction name="menuView"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>&amp;Open...</string>
+   </property>
+   <property name="statusTip">
+    <string>Load DXF or other supported document</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="dxf2gcode_images.qrc">
+     <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+   <property name="statusTip">
+    <string>Exit DXF2GCODE and close window</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionShowPathDirections">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Show Path Directions</string>
+   </property>
+   <property name="statusTip">
+    <string>Always shows the path direction in the plot (not only while selected)</string>
+   </property>
+  </action>
+  <action name="actionShowDisabledPaths">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Show Disabled &amp;Paths</string>
+   </property>
+  </action>
+  <action name="actionAutoscale">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Autoscale</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V, A</string>
+   </property>
+  </action>
+  <action name="actionDeleteG0Paths">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Delete G0 Paths</string>
+   </property>
+  </action>
+  <action name="actionConfiguration">
+   <property name="text">
+    <string>&amp;Configuration...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
+   </property>
+  </action>
+  <action name="actionConfigurationPostprocessor">
+   <property name="text">
+    <string>&amp;Postprocessor configuration...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionTolerances">
+   <property name="text">
+    <string>&amp;Tolerances</string>
+   </property>
+  </action>
+  <action name="actionScaleAll">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Scale All</string>
+   </property>
+  </action>
+  <action name="actionRotateAll">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Rotate All</string>
+   </property>
+  </action>
+  <action name="actionMoveWorkpieceZero">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Move Workpiece Zero</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="actionOptimizePaths">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Optimize Paths</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="actionExportShapes">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Export Shapes</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+E</string>
+   </property>
+  </action>
+  <action name="actionOptimizeAndExportShapes">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Optimize &amp;and Export Shapes</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionLiveUpdateExportRoute">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Live Update Export Route</string>
+   </property>
+  </action>
+  <action name="actionReload">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Reload</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionSplitLineSegments">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Split &amp;Line Segments</string>
+   </property>
+   <property name="statusTip">
+    <string>Split line segments, e.g. can be used for compensation (G41/G42) in combination with EMC</string>
+   </property>
+  </action>
+  <action name="actionAutomaticCutterCompensation">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Automatic Cutter Compensation</string>
+   </property>
+  </action>
+  <action name="actionMilling">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Milling</string>
+   </property>
+  </action>
+  <action name="actionDragKnife">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Drag Knife</string>
+   </property>
+  </action>
+  <action name="actionLathe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Lathe</string>
+   </property>
+  </action>
+  <action name="actionTopView">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Top View</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V, T</string>
+   </property>
+  </action>
+  <action name="actionIsometricView">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Isometric View</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V, I</string>
+   </property>
+  </action>
+  <action name="actionSaveProjectAs">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Save Project As...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionMillimeters">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Millimeters</string>
+   </property>
+  </action>
+  <action name="actionInches">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Inches</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Canvas</class>
+   <extends>QGraphicsView</extends>
+   <header>dxf2gcode.gui.canvas</header>
+  </customwidget>
+  <customwidget>
+   <class>MessageBox</class>
+   <extends>QTextBrowser</extends>
+   <header>dxf2gcode.gui.messagebox</header>
+  </customwidget>
+  <customwidget>
+   <class>TreeView</class>
+   <extends>QTreeView</extends>
+   <header>dxf2gcode.gui.treeview</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>mytabWidget</tabstop>
+  <tabstop>entitiesTreeView</tabstop>
+  <tabstop>blocksCollapsePushButton</tabstop>
+  <tabstop>blocksExpandPushButton</tabstop>
+  <tabstop>canvas</tabstop>
+  <tabstop>messageBox</tabstop>
+  <tabstop>layersShapesTreeView</tabstop>
+  <tabstop>layersCollapsePushButton</tabstop>
+  <tabstop>layersExpandPushButton</tabstop>
+  <tabstop>layersGoUpPushButton</tabstop>
+  <tabstop>layersGoDownPushButton</tabstop>
+  <tabstop>toolDiameterComboBox</tabstop>
+  <tabstop>startAtXLineEdit</tabstop>
+  <tabstop>startAtYLineEdit</tabstop>
+  <tabstop>zRetractionArealLineEdit</tabstop>
+  <tabstop>zSafetyMarginLineEdit</tabstop>
+  <tabstop>zInitialMillDepthLineEdit</tabstop>
+  <tabstop>zInfeedDepthLineEdit</tabstop>
+  <tabstop>zFinalMillDepthLineEdit</tabstop>
+  <tabstop>g1FeedXYLineEdit</tabstop>
+  <tabstop>g1FeedZLineEdit</tabstop>
+ </tabstops>
+ <resources>
+  <include location="dxf2gcode_images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>layersCollapsePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>layersShapesTreeView</receiver>
+   <slot>collapseAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>layersExpandPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>layersShapesTreeView</receiver>
+   <slot>expandAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

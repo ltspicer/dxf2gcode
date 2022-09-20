@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=dxf2gcode converter
+Comment=2D dxf drawings to CNC machine compatible G-Code converter
+Exec=dxf2gcode %f
+Icon=dxf2gcode
+Keywords=cam;cnc;dxf;g-code
+Terminal=false
+StartupNotify=false
+Type=Application
+

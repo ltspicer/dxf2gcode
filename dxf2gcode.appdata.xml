@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Damian Wrobel <dwrobel@ertelnet.rybnik.pl> -->
+<component type="desktop">
+  <id>dxf2gcode.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>dxf2gcode</name>
+  <summary>2D dxf drawings to CNC machine compatible G-Code converter</summary>
+  <description>
+    <p>
+      dxf2gcode is a tool for converting 2D (DXF, PDF, PS) drawings to CNC machine compatible G-Code.
+    </p>
+
+    <p>Some features:</p>
+      <ul>
+        <li>Integration in EMC2,</li>
+        <li>Fully adjustable Postprocessor,</li>
+        <li>G0 moves reduction by route optimization,</li>
+        <li>Import of DXF and PDF,</li>
+        <li>Improved accuracy for splines import by Line and Arc's,</li>
+        <li>Mill parameter specification by layers,</li>
+        <li>Drag knife and lathe support,</li>
+        <li>Breaks a.k.a Tabs support,</li>
+        <li>AutoCAD Blocks and Inserts,</li>
+        <li>Multiple tools,</li>
+        <li>Multiple language support: English, German, French, Russian,</li>
+        <li>3D viewer.</li>
+      </ul>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://a.fsdn.com/con/app/proj/dxf2gcode/screenshots/piede_20.png/1</image>
+    </screenshot>
+    <screenshot>
+      <image>https://a.fsdn.com/con/app/proj/dxf2gcode/screenshots/Frontplatte.png/1</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://sourceforge.net/projects/dxf2gcode/</url>
+  <update_contact>dwrobel_at_ertelnet.rybnik.pl</update_contact>
+</component>
+
