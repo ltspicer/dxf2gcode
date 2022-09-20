@@ -8,10 +8,14 @@ Python 3.10 ready.
 
 Please test it and give me feedback.
 
+
 Installer for Debian based OS specific to this release:
 
 linux.installer.py3.10.sh
 
 Just start with:
 ./linux.installer.py3.10.sh
-and follow the instructions.
+in console and follow the instructions.
+
+
+( https://github.com/ltspicer/dxf2gcode     download code as zip and unzip on local disk)
