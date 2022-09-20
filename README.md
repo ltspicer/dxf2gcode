@@ -2,8 +2,7 @@
 
 2022-02-26 Release Candidate 1
 
-Modifications inspired by https://sourceforge.net/p/dxf2gcode/sourcecode/ci/cbac98d2f079b0c39a5e9b86d5c320f36fa079b5/,
-but no longer used.
+Modifications inspired by https://sourceforge.net/projects/dxf2gcode/files/dxf2gcode-20220226_RC1.zip
 
 Python 3.10 ready.
 
