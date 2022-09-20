@@ -7,7 +7,7 @@ but no longer used.
 
 Python 3.10 ready.
 
-Please test it and give feedback.
+Please test it and give me feedback.
 
 Installer for Debian based OS specific to this release:
 
