@@ -9,13 +9,13 @@ Python 3.10 ready.
 Please test it and give me feedback.
 
 
-Installer for Debian based OS specific to this release:
+Installer for Debian based OS:
 
-linux.installer.py3.10.sh
+linux.installer.sh
 
 Just start with:
 
-./linux.installer.py3.10.sh
+./linux.installer.sh
 
 in console and follow the instructions.
 
