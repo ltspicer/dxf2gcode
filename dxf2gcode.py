@@ -3,9 +3,11 @@
 
 ############################################################################
 #
-#   Copyright (C) 2010-2016
+#   Copyright (C) 2010-2022
 #    Christian Kohlöffel
 #    Jean-Paul Schouwstra
+#
+#   German translation & Python 3.10 compatibility by Daniel Luginbühl
 #
 #   This file is part of DXF2GCODE.
 #
