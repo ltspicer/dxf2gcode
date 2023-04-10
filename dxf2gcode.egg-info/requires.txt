@@ -1,3 +1,0 @@
-PyOpenGL
-PyQt5
-configobj
