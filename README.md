@@ -11,7 +11,7 @@ Please test it and give me feedback.
 
 Installer for Debian based OS:
 
-linux.installer.sh
+linux.installer.sh (Download: https://github.com/ltspicer/dxf2gcode.linux.installer )
 
 Just start with:
 
