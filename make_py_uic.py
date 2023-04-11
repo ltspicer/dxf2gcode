@@ -64,8 +64,8 @@ if "linux" in sys.platform.lower() or "unix" in sys.platform.lower() or "darwin"
     print("Using platform tools \"%s\" and \"%s\"\n" % (UICPATH, RCCPATH))
 else:
     PYTHONPATH = os.path.split(sys.executable)[0]
-    UICPATH = os.path.join(PYTHONPATH, "Scripts/pyuic5.exe")
-    RCCPATH = os.path.join(PYTHONPATH, "Scripts/pyrcc5.exe")
+    UICPATH = os.path.join(PYTHONPATH, "Scripts\pyuic5.exe")
+    RCCPATH = os.path.join(PYTHONPATH, "Scripts\pyrcc5.exe")
     print("Using Windows platform tools \"%s\" and \"%s\"\n" % (UICPATH, RCCPATH))
 
 FILEPATH = os.path.realpath(os.path.dirname(sys.argv[0]))
@@ -79,7 +79,7 @@ RCFILEver = "dxf2gcode_images%s.qrc" % pyQtVer
 RCPYFILEver = "dxf2gcode_images%s_rc.py" % pyQtVer
 
 ui_data = ""
-with open(UIFILE, "r") as myfile:
+with open(os.path.join(FILEPATH,UIFILE), "r") as myfile:
     ui_data = myfile.read().replace(RCFILE, RCFILEver)
 
 fd, tmp_ui_filename = tempfile.mkstemp()
@@ -89,8 +89,8 @@ try:
 
     OPTIONS = "-o"
 
-    cmd1 = [UICPATH, tmp_ui_filename, OPTIONS, PYFILEver]
-    cmd2 = [RCCPATH, OPTIONS, RCPYFILEver, RCFILE]
+    cmd1 = [UICPATH, tmp_ui_filename, OPTIONS, os.path.join(FILEPATH,PYFILEver)]
+    cmd2 = [RCCPATH, OPTIONS, os.path.join(FILEPATH,RCPYFILEver),os.path.join(FILEPATH,RCFILE)]
 
     print(" ".join(cmd1))
     subprocess.check_call(cmd1)
