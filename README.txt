@@ -9,6 +9,11 @@ on your local machine for system-wide installation as well as for development
 and testing purposes.
 
 
+Automated installer for Debian based systems
+--------------------------------------------
+https://github.com/ltspicer/dxf2gcode.linux.installer
+
+
 Prerequisites
 -------------
 
@@ -187,11 +192,11 @@ Translations
 
 Authors
 -------
-  Christian Kohlöffel,
-  Jean-Paul Schouwstra,
-  John Bradshaw,
-  Vinzenz Schulz,
-  Robert Lichtenberger,
+  Christian Kohlöffel
+  Jean-Paul Schouwstra
+  John Bradshaw
+  Vinzenz Schulz
+  Robert Lichtenberger
   Damian Wrobel
   Daniel Luginbühl
 
