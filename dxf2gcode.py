@@ -3,7 +3,7 @@
 
 ############################################################################
 #
-#   Copyright (C) 2010-2023
+#   Copyright (C) 2010-2016
 #    Christian Kohlöffel
 #    Jean-Paul Schouwstra
 #
@@ -1234,13 +1234,16 @@ if __name__ == "__main__":
     translator = QtCore.QTranslator()
     #logger.debug(os.getcwd())
     #logger.debug(os.path.dirname(os.path.abspath(__file__)))
-    #logger.debug(translator.load("dxf2gcode_" + locale, "/usr/share/dxf2gcode/i18n"))
+    #logger.debug(translator.load("dxf2gcode_" + locale, "./i18n"))
     #logger.debug(translator.load("dxf2gcode_" + locale, os.path.join(os.path.dirname(os.path.abspath(__file__)),"i18n")))
 
-    if translator.load("dxf2gcode_" + locale, "/usr/share/dxf2gcode/i18n"):
+    if translator.load("dxf2gcode_" + locale, "./i18n"):
         app.installTranslator(translator)
     elif translator.load("dxf2gcode_" + locale, os.path.join(os.path.dirname(os.path.abspath(__file__)),"i18n")):
         app.installTranslator(translator)
+    elif translator.load("dxf2gcode_" + locale, "/usr/share/dxf2gcode/i18n"):
+        app.installTranslator(translator)
+
 
     # If string version_mismatch isn't empty, we popup an error and exit
     if g.config.version_mismatch:
