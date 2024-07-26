@@ -319,7 +319,7 @@ class MainWindow(QMainWindow):
                 filename = self.showSaveDialog(self.tr('Export to file'), MyFormats, g.config.vars.Paths['output_dir'])
                 save_filename = qstr_encode(filename[0])
             else:
-                filename = [None, post_pro]
+                filename = [None, options.post_pro]
                 save_filename = saveas
 
             # If Cancel was pressed

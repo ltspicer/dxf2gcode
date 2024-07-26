@@ -9,7 +9,7 @@ import sys
 from cx_Freeze import Executable, setup
 
 
-version = "20230206"
+version = "20240509"
 
 base = 'Console'
 if sys.platform == 'win32':
@@ -80,7 +80,7 @@ executables = [
 
 setup(name='DXF2GCODE',
       version=version[0:4] + "." + version[4:6] + "." + version[6:8],  # converts YYYYMMDD -> YYYY.MM.DD
-      description='Converting 2D drawings to CNC machine compatible G-Code. Release Candidate based on development branch',
+      description='Converting 2D drawings to CNC machine compatible G-Code. Release Candidate 2 based on development branch',
       options=options,
       executables=executables
       )
