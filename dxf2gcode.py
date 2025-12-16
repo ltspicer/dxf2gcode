@@ -1218,6 +1218,30 @@ if __name__ == "__main__":
     """
     Log = LoggerClass(logger)
 
+    # command line options
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("filename", nargs="?")
+
+    #    parser.add_argument("-f", "--file", dest = "filename",
+    #                        help = "read data from FILENAME")
+    parser.add_argument("-e", "--export", dest="export_filename",
+                        help="export data to FILENAME")
+    parser.add_argument("-p", "--postpro", dest="post_pro",
+                        help="Post Processor to use")
+    parser.add_argument("-o", "--optimize", action="store_true",
+                        dest="optimize", help="optimize before export")
+    parser.add_argument("-q", "--quiet", action="store_true",
+                        dest="quiet", help="no GUI")
+    parser.add_argument("-c", "--cfg", dest="cfg_suffix",
+                        help="Config directory suffix to use")
+    #    parser.add_option("-v", "--verbose",
+    #                      action = "store_true", dest = "verbose")
+    options = parser.parse_args()
+
+    if options.cfg_suffix:
+        g.folder = g.folder + '.' + options.cfg_suffix
+
     g.config = MyConfig()
     Log.set_console_handler_loglevel()
 
@@ -1266,24 +1290,6 @@ if __name__ == "__main__":
     g.window = window
     Log.add_window_logger(window.ui.messageBox)
 
-    # command line options
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument("filename", nargs="?")
-
-    #    parser.add_argument("-f", "--file", dest = "filename",
-    #                        help = "read data from FILENAME")
-    parser.add_argument("-e", "--export", dest="export_filename",
-                        help="export data to FILENAME")
-    parser.add_argument("-p", "--postpro", dest="post_pro",
-                        help="Post Processor to use")
-    parser.add_argument("-o", "--optimize", action="store_true",
-                        dest="optimize", help="optimize before export")
-    parser.add_argument("-q", "--quiet", action="store_true",
-                        dest="quiet", help="no GUI")
-    #    parser.add_option("-v", "--verbose",
-    #                      action = "store_true", dest = "verbose")
-    options = parser.parse_args()
     g.quiet = options.quiet
 
     # (options, args) = parser.parse_args()
